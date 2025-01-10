@@ -1,1 +1,35 @@
-
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>"complaint demo"</title>
+  <script src="https://rossmannsdpspzoo--exp.sandbox.my.site.com/lightning/lightning.out.js"></script>
+</head>
+<body>
+  <div data-lightning-out="true"></div>
+  <script>
+    const appName = 'c:complaintDemo_ligtningOut';
+    const componentName = 'c:articleSearch';
+    const lightningEndpoint = 'https://rossmannsdpspzoo--exp.sandbox.my.site.com/';
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {
+    };
+    
+    $Lightning.use(
+            appName,
+            function (){
+              $Lightning.createComponent(
+                      componentName,
+                      componentAttributes,
+                      targetElement,
+                      function (cmp){
+                        console.log('lightning component created');
+                      }
+              );
+            },
+            lightningEndpoint
+    );
+  </script>
+</body>
+</html>
